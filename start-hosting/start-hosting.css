@@ -1,0 +1,68 @@
+main {
+  padding-top: 1rem;
+}
+
+.signup-title {
+  text-align: center;
+  color: #ff5454;
+}
+
+.signup-form {
+  padding: 1rem;
+  font-weight: bold;
+  display: grid;
+  grid-auto-rows: 3rem;
+  row-gap: 0.5rem;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form select {
+  display: block;
+  width: 100%;
+}
+
+.signup-form input,
+.signup-form select {
+  padding: 0.2rem 0.5rem;
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+  border-color: #198b4c;
+  background-color: #f1f1f1;
+}
+
+input[type="checkbox"],
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+button[type="submit"] {
+  display: block;
+}
+
+@media (min-width: 43rem) {
+  .signup-form {
+    margin: auto;
+    width: 25rem;
+    grid-template-columns: 8rem auto;
+    gap: 2rem;
+  }
+
+  .signup-form__checkbox {
+    grid-column: span 2;
+  }
+
+  .signup-form label[for="title"] {
+    align-self: flex-end;
+  }
+
+  .signup-form select[id="title"] {
+    grid-column: span 2;
+  }
+}
